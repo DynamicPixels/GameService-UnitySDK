@@ -1,0 +1,25 @@
+{
+  "name": "dev.dynamicpixels.sdk",
+  "version": "2.0.0",
+  "displayName": "DynamicPixels SDK",
+  "description": "Empower your games with most advance online features",
+  "unity": "2022.3",
+  "unityRelease": "0f1",
+  "documentationUrl": "https://docs.dynamicpixels.dev",
+  "changelogUrl": "https://github.com/DynamicPixels/Unity3d-C--SDK/releases",
+  "licensesUrl": "https://github.com/DynamicPixels/Unity3d-C--SDK/blob/master/LICENSE",
+  "author": {
+    "name": "DynamicPixels",
+    "email": "info@dynamicpixels.dev",
+    "url": "https://dynamicpixels.dev"
+  },
+  "keywords": [
+    "realtime",
+    "co-op",
+    "leaderboard",
+    "save",
+"backend",
+"fps",
+"game server"
+  ]
+}
