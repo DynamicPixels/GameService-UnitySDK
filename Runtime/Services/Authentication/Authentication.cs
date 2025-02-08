@@ -65,6 +65,24 @@ namespace DynamicPixels.GameService.Services.Authentication
             await SetupSdk(result.Result.Token, result.Result.User, result.Result.Connection);
             return result.Result;
         }
+        
+        public async Task<LoginResponse> LoginWithSteam<T>(T input, Action<LoginResponse> successfulCallback = null, Action<ErrorCode, string> failedCallback = null) where T : LoginWithSteamParams
+        {
+            var result = await _repository.LoginWithSteam(input);
+            result.Result.IsSuccessful = result.Successful;
+            result.Result.ErrorCode = result.ErrorCode;
+            result.Result.ErrorMessage = result.ErrorMessage;
+            if (result.Successful)
+            {
+                successfulCallback?.Invoke(result.Result);
+            }
+            else
+            {
+                failedCallback?.Invoke(result.ErrorCode, result.ErrorMessage);
+            }
+            await SetupSdk(result.Result.Token, result.Result.User, result.Result.Connection);
+            return result.Result;
+        }
 
         /// <summary>
         /// Logs in a user with an email address.

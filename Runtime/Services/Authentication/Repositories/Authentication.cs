@@ -31,6 +31,11 @@ namespace DynamicPixels.GameService.Services.Authentication.Repositories
         {
             return WebRequest.Post<LoginResponse>(UrlMap.GoogleAuthUrl, input.ToString());
         }
+        
+        public Task<WebRequest.ResponseWrapper<LoginResponse>> LoginWithSteam<T>(T input) where T : LoginWithSteamParams
+        {
+            return WebRequest.Post<LoginResponse>(UrlMap.SteamAuthUrl, input.ToString());
+        }
 
         public Task<WebRequest.ResponseWrapper<LoginResponse>> LoginAsGuest<T>(T input) where T : LoginAsGuestParams
         {

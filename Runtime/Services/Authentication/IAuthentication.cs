@@ -11,6 +11,7 @@ namespace DynamicPixels.GameService.Services.Authentication
         Task<LoginResponse> RegisterWithEmail<T>(T input, Action<LoginResponse> successfulCallback = null, Action<ErrorCode, string> failedCallback = null) where T : RegisterWithEmailParams;
         Task<LoginResponse> LoginWithEmail<T>(T input, Action<LoginResponse> successfulCallback = null, Action<ErrorCode, string> failedCallback = null) where T : LoginWithEmailParams;
         Task<LoginResponse> LoginWithGoogle<T>(T input, Action<LoginResponse> successfulCallback = null, Action<ErrorCode, string> failedCallback = null) where T : LoginWithGoogleParams;
+        Task<LoginResponse> LoginWithSteam<T>(T input, Action<LoginResponse> successfulCallback = null, Action<ErrorCode, string> failedCallback = null) where T : LoginWithSteamParams;
         Task<LoginResponse> LoginAsGuest<T>(T input, Action<LoginResponse> successfulCallback = null, Action<ErrorCode, string> failedCallback = null) where T : LoginAsGuestParams;
         Task<LoginResponse> LoginWithToken<T>(T input, Action<LoginResponse> successfulCallback = null, Action<ErrorCode, string> failedCallback = null) where T : LoginWithTokenParams;
         Task<RowResponse<bool>> IsOtaReady<T>(T input, Action<bool> successfulCallback = null, Action<ErrorCode, string> failedCallback = null) where T : IsOtaReadyParams;
