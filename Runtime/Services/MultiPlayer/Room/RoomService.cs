@@ -37,9 +37,10 @@ namespace DynamicPixels.GameService.Services.MultiPlayer.Room
             Action<ErrorCode, string> failedCallback = null)
         {
             var result = await WebRequest.Post<Room>(UrlMap.CreateRoomUrl, input.ToString());
-            result.Result.Config(_socketAgent);
+            
             if (result.Successful)
             {
+                result.Result.Config(_socketAgent);
                 successfulCallback?.Invoke(result.Result);
             }
             else
@@ -128,9 +129,10 @@ namespace DynamicPixels.GameService.Services.MultiPlayer.Room
             Action<ErrorCode, string> failedCallback = null)
         {
             var result = await WebRequest.Get<Room>(UrlMap.GetRoomByIdUrl(roomId));
-            result.Result.Config(_socketAgent);
+            
             if (result.Successful)
             {
+                result.Result.Config(_socketAgent);
                 successfulCallback?.Invoke(result.Result);
             }
             else
@@ -156,9 +158,10 @@ namespace DynamicPixels.GameService.Services.MultiPlayer.Room
             Action<ErrorCode, string> failedCallback = null)
         {
             var result = await WebRequest.Get<Room>(UrlMap.GetRoomByNameUrl(name));
-            result.Result.Config(_socketAgent);
+            
             if (result.Successful)
             {
+                result.Result.Config(_socketAgent);
                 successfulCallback?.Invoke(result.Result);
             }
             else
@@ -184,9 +187,10 @@ namespace DynamicPixels.GameService.Services.MultiPlayer.Room
             Action<ErrorCode, string> failedCallback = null)
         {
             var result = await WebRequest.Post<Room>(UrlMap.JoinToRoomByIdUrl(roomId));
-            result.Result.Config(_socketAgent);
+            
             if (result.Successful)
             {
+                result.Result.Config(_socketAgent);
                 successfulCallback?.Invoke(result.Result);
             }
             else
@@ -212,9 +216,10 @@ namespace DynamicPixels.GameService.Services.MultiPlayer.Room
             Action<ErrorCode, string> failedCallback = null)
         {
             var result = await WebRequest.Post<Room>(UrlMap.JoinToRoomByNameUrl(roomName));
-            result.Result.Config(_socketAgent);
+            
             if (result.Successful)
             {
+                result.Result.Config(_socketAgent);
                 successfulCallback?.Invoke(result.Result);
             }
             else
@@ -239,9 +244,10 @@ namespace DynamicPixels.GameService.Services.MultiPlayer.Room
             Action<ErrorCode, string> failedCallback = null)
         {
             var result = await WebRequest.Post<Room>(UrlMap.AutoMatchUrl);
-            result.Result.Config(_socketAgent);
+            
             if (result.Successful)
             {
+                result.Result.Config(_socketAgent);
                 successfulCallback?.Invoke(result.Result);
             }
             else
