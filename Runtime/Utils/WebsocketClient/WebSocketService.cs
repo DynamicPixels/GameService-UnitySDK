@@ -138,7 +138,7 @@ namespace DynamicPixels.GameService.Utils.WebsocketClient
 
                     _pingTimer.Change(TimeSpan.FromSeconds(_configuration.PingInterval),
                         TimeSpan.FromSeconds(_configuration.PingInterval)); // Start the timer
-                    ReceiveMessagesAsync();
+                    await ReceiveMessagesAsync();
                 }
                 catch (Exception ex)
                 {
