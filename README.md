@@ -1,5 +1,4 @@
-![dynamicpixels unity 3d sdk](./Editor/github-banner.webp)
-
+![dynamicpixels unity 3d sdk](./github-banner.webp)
 
 ## Empower your games with most advance online features
 
@@ -26,11 +25,10 @@ DynamicPixels provide following services:
 
 Read more in [the documentation](https://docs.dynamicpixels.dev).
 
-### Quickstart 
+### Quickstart
 
 First, Register to DynamicPixels as a developer and create a client for your game, now, open your Unity project, then go to the Package Manager modal:
 
 `Window -> Package Manager -> + Drop Down -> Add Package From Git Url`
 
 Now add the `DynamicPixels Initilizer` component to one of your objects in the first scene of your project. and fill in the Client ID and Secret according to the data in your game's panel. Done! use functions in your code...
-
