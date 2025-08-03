@@ -119,9 +119,9 @@ namespace DynamicPixels.GameService.Services.MultiPlayer.Room
         /// Automatically matches the user with a room.
         /// </summary>
         /// <returns>A task representing the asynchronous operation, with the matched room as the result.</returns>
-        public async Task<Room> AutoMatch()
+        public async Task<Room> AutoMatch(AutoMatchParams inputParams)
         {
-            var room = await WebRequest.Post<Room>(UrlMap.AutoMatchUrl);
+            var room = await WebRequest.Post<Room>(UrlMap.AutoMatchUrl, inputParams.ToString());
             room.Config(_socketAgent);
             return room;
         }

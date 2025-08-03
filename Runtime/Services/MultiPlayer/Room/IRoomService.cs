@@ -14,7 +14,7 @@ namespace DynamicPixels.GameService.Services.MultiPlayer.Room
         Task<Room> GetRoomByName(string name);
         Task<Room> Join(int roomId);
         Task<Room> Join(string roomName);
-        Task<Room> AutoMatch();
+        Task<Room> AutoMatch(AutoMatchParams inputParams);
         Task Leave(int roomId);
         Task DeleteRoom(int roomId);
     }
